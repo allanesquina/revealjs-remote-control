@@ -7,6 +7,10 @@ Change the URL in 'views/index.ejs' and 'public/javascripts/script.js'
 ```
 var socket = io.connect('http://yourdomain:port'),
 ```
+Install dependencies
+```
+npm install
+```
 Start server
 ```
 node app.js
