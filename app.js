@@ -1,11 +1,9 @@
-
 /**
  * Module dependencies.
  */
 
 var express = require('express'),
 		routes = require('./routes'),
-		rc = require('./routes/controls'),
 		http = require('http'),
 		path = require('path'),
 		io = require('socket.io'),
@@ -29,11 +27,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/remotecontrol', rc.controls);
-
 
 io = io.listen(server);
-
 
 io.sockets.on('connection', function (socket) {
   //socket.emit('news', { hello: 'world' });
