@@ -2,7 +2,7 @@ Revealjs Remote Control
 =====================
 
 ## Usage
-Change the URL in files 'views/index.ejs' and 'public/javascripts/script.js'
+Change the URL in 'views/index.ejs' and 'public/javascripts/script.js'
 
 ```
 var socket = io.connect('http://yourdomain:port'),
