@@ -17,6 +17,6 @@ Add the following code in the index file of your revealjs project
 <script src="http://yourdomain:port/socket.io/socket.io.js"></script>
 <script src="http://yourdomain:port/javascripts/script.js"></script>
 ```
-Access the url 'http://yourdomain:port' and control your presentation
+Access the url 'http://yourdomain:port' and control your presentation :)
 
 
