@@ -1,8 +1,12 @@
 Revealjs Remote Control
 =====================
 
+This project was developed to handle [reveal.js](https://github.com/hakimel/reveal.js "Title") events remotely.
+
 ## Usage
 Change the URL in 'views/index.ejs' and 'public/javascripts/script.js'
+
+
 
 ```
 var socket = io.connect('http://yourdomain:port'),
