@@ -1,0 +1,49 @@
+* {
+	padding: 0px;
+	margin:0px;
+}
+
+body {
+	background: #000;
+}
+
+.btn {
+	display: block;
+	position: absolute;
+	height: 33.2%;
+	width: 33%;
+	border:1px solid #051725;
+	text-align: center;
+	position: absolute;
+	margin:auto;
+	background: #000;
+	text-indent: -100000px;
+}
+.btn:hover {
+	background: #001930;	
+}
+
+#left {
+	left:0px;
+	top: 33.43%;
+	width: 50%;
+}
+#right {
+	right: 0px;
+	top: 33.43%;
+	width: 50%;
+
+}
+#up {
+	top:0px;
+	left: 33.4%;
+	
+}
+#down {
+	bottom: 0px;
+	width: 100%;
+}
+#next {
+	right: 0px;
+	top:0;
+}

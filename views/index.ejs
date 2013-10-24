@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    window.onload = function() {  
+		var socket = io.connect('http://localhost:3000'),	  
+			btnNext = document.getElementById("next"),
+			btnPrev = document.getElementById("prev"),
+			btnLeft = document.getElementById("left"),
+			btnRight = document.getElementById("right"),
+			btnUp = document.getElementById("up"),
+			btnDown = document.getElementById("down");
+
+  	  btnNext.addEventListener("click", function(){
+  	  	socket.emit('action', {act : "next"});
+  	  }, false);
+      btnPrev.addEventListener("click", function(){
+        socket.emit('action', {act : "prev"});
+      }, false);
+      btnLeft.addEventListener("click", function(){
+        socket.emit('action', {act : "left"});
+      }, false);
+      btnRight.addEventListener("click", function(){
+        socket.emit('action', {act : "right"});
+      }, false);
+      btnUp.addEventListener("click", function(){
+        socket.emit('action', {act : "up"});
+      }, false);
+      btnDown.addEventListener("click", function(){
+        socket.emit('action', {act : "down"});
+      }, false);
+    }
+
+	</script>
+  </head>
+  <body>
+  	<nav>
+	    <a id="next"  class="btn" href="#">Next</a>
+	    <a id="prev" class="btn" href="#">Prev</a>
+	    <a id="left" class="btn" href="#">Left</a>
+	    <a id="right" class="btn" href="#">Right</a>
+	    <a id="up" class="btn" href="#">Up</a>
+	    <a id="down" class="btn" href="#">Down</a>
+    </nav>
+  </body>
+</html>
