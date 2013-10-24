@@ -1,9 +1,10 @@
+
 /**
  * Module dependencies.
  */
 
 var express = require('express'),
-		routes = require('./routes'),
+		routes = require('./routes'),		
 		http = require('http'),
 		path = require('path'),
 		io = require('socket.io'),
@@ -11,7 +12,7 @@ var express = require('express'),
 		server = http.createServer(app);
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8080);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.favicon());
@@ -30,8 +31,7 @@ app.get('/', routes.index);
 
 io = io.listen(server);
 
-io.sockets.on('connection', function (socket) {
-  //socket.emit('news', { hello: 'world' });
+io.sockets.on('connection', function (socket) {  
   socket.on('action', function (data) {
     console.log(data);
     io.sockets.emit("action", data);
@@ -42,4 +42,3 @@ io.sockets.on('connection', function (socket) {
 server.listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
-
