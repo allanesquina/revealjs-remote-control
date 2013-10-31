@@ -10,9 +10,10 @@ var express = require('express'),
 		io = require('socket.io'),
 		app = express(),
 		server = http.createServer(app);
+		global._port = 8080;
 
 // all environments
-app.set('port', process.env.PORT || 8080);
+app.set('port', process.env.PORT || global._port);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.favicon());
